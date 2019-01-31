@@ -94,7 +94,7 @@ def binary_class(data, true_class):
     return (X, Y)
 
 
-def process_data(task, train_size=20000, test_size=2000, val_perc=0.1):
+def process_data(task, train_size=60000, test_size=10000, val_perc=0.1):
     '''
     Creates the datasets to be used in the logistic regression task.
     '''
@@ -102,6 +102,7 @@ def process_data(task, train_size=20000, test_size=2000, val_perc=0.1):
         excluded=[0,1,4,5,6,7,8,9]
         true_class=2
     X_train, Y_train, X_test, Y_test = mnist.load()
+
     train_data, test_data = (X_train, Y_train), (X_test, Y_test)
     train_data, test_data = partition_dataset(train_data, test_data, train_size,
                                               test_size)
