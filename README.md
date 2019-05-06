@@ -1,1 +1,0 @@
-# tdt4265_computer_vision
